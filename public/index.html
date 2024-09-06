@@ -1,0 +1,70 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-green-600">
+        <a class="navbar-brand" href="#">
+            <img src="https://img.freepik.com/premium-vector/chat-app-logo-design-template-can-be-used-icon-chat-application-logo_605910-1724.jpg" alt="Logo" class="logo">
+            ChatApp
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mx-auto my-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="chat-container bg-white shadow-lg rounded-lg">
+                    <div class="chat-header bg-green-700 text-white p-3 rounded-t-lg">
+                        <h4>Chat Room</h4>
+                    </div>
+                    <div class="chat-body p-3 overflow-y-auto h-96" id="messages">
+                        <!-- Messages will be displayed here -->
+                    </div>
+                    <div class="chat-footer p-3 bg-gray-200 border-t border-gray-300 rounded-b-lg">
+                        <form id="form" class="flex">
+                            <input type="text" id="messageInput" class="form-control flex-1 mr-2 p-2 rounded-lg border border-gray-300" placeholder="Type your message">
+                            <button class="btn btn-primary" type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>
